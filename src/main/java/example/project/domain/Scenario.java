@@ -25,4 +25,15 @@ public class Scenario {
         // parse scenarioDescription and save the result to the class attributes
         // not implemented
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null)
+            return false;
+
+        Scenario scenario = (Scenario) obj;
+        return roadType.equals(scenario.roadType)
+                && weatherCondition.equals(scenario.weatherCondition)
+                && Math.pow(initEgoCarPos.get(0) - scenario.initEgoCarPos.get(0), 2) + Math.pow(initEgoCarPos.get(1) - scenario.initEgoCarPos.get(1), 2) <= 0.0025;
+    }
 }

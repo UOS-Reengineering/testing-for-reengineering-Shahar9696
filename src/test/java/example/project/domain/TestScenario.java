@@ -1,7 +1,11 @@
 package example.project.domain;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.fail;
 
@@ -25,7 +29,7 @@ public class TestScenario {
 
     @Test
     public void testEquality() {
-        fail();
+        assertEquals(s1, s2);
         // delete the above line and implement this properly to test if two scenarios are equal.
         // Let's define our equality as follows:
         // (1) roadType and weatherCondition must be the same.
